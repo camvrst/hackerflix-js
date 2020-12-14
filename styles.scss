@@ -1,0 +1,122 @@
+/* dependencies */
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import "~bootstrap/scss/bootstrap";
+
+/* local imports */
+@import "./styles/variables";
+@import "./styles/fonts";
+@import "./styles/base";
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  padding: 20px;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 700;
+  h1::before {
+    content: "<";
+    color: $secondary-color;
+  }
+  h1::after {
+    content: "/>";
+    color: $secondary-color;
+  }
+}
+
+.movie-section {
+  justify-content: space-around;
+  margin: 50px 25px;
+}
+
+.movie-card {
+  margin: 15px;
+  background-color: $secondary-color;
+  width: 250px;
+  height: 350px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.popup-div,
+.pop-up {
+  z-index: 1;
+  position: fixed;
+  top: 30%;
+  margin: auto;
+  right: 25%;
+  background-color: black;
+  opacity: 95%;
+  text-align: left;
+  i.fa-times-circle {
+    color: $secondary-color;
+    font-size: 20px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .popup-div,
+  .pop-up {
+    right: 0%;
+  }
+}
+
+.toggle {
+  display: none;
+}
+
+/* BUTTONS */
+
+.btn-new {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  border: none;
+  font-family: "Courier New", Courier, monospace;
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 10px;
+  &:hover {
+    background-color: rgb(61, 78, 61);
+  }
+}
+
+.btn-all {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: none;
+  font-family: "Courier New", Courier, monospace;
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 10px;
+  &:hover {
+    background-color: rgb(61, 78, 61);
+  }
+}
+
+.movie-heart {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  i {
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .fa-heart {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 24px;
+    color: rgb(207, 130, 238);
+  }
+}

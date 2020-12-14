@@ -1,0 +1,88 @@
+// const movieById = (id) => movies.find((i) => i.id === id);
+
+/*
+for (const movie of movies) {
+  movieSection.innerHTML += `
+        <div class="movie-card" style="background-image:url('posters/${(movie.img) ? `./${movie.imdb}.jpg` : ''}')">
+        <h3> ${(movie.img) ? '' : `${movie.title}`} </h3>
+        </div>
+  `;
+}
+*/
+
+/*
+const closePopUp = () => {
+  const popUpDisplay = document.querySelector('div.pop-up');
+  const closePop = document.querySelector('i.close-pop');
+  closePop.addEventListener('click', () => {
+    popUpDisplay.remove();
+  });
+};
+*/
+/*
+for (let i = 0; i < movieCards.length; i++) {
+  movieCards[i].addEventListener('click', (e) => {
+    console.log(movies.findIndex((movie) => movie.title === e.target.innerHTML));
+  });
+}
+*/
+
+/*
+for (let i = 0; i < movieCards.length; i++) {
+  movieCards[i].addEventListener('click', () => {
+    console.log(movieCards[i]);
+  });
+}
+*/
+/*
+movieCard.forEach((el) => {
+  el.addEventListener('click', () => {
+    for (let i = 0; i < movieCard.length; i++) {
+      const popMovie = `
+                  <div class="pop-up col-sm-12 col-md-6">
+                    <i class="close-pop fas fa-times-circle"></i>
+                    <h3> Titre : ${movies[i].title} </h3>
+                    <p> Genres : ${movies[i].genres} </p>
+                    <p> Année de sortie : ${movies[i].year} </p>
+                    <p> Note : ${movies[i].note} </p>
+                    <h4> Résumé : </h4>
+                    <p> ${movies[i].plot} </p>
+                  `;
+      movieSection.innerHTML += popMovie;
+    }
+  });
+  const popUpDisplay = document.querySelector('div.pop-up');
+  const closePop = document.querySelector('i.close-pop');
+  closePop.addEventListener('click', () => {
+    popUpDisplay.style.display = 'none';
+    alert('hello');
+  });
+});
+
+const movieCards = document.querySelectorAll('div.movie-card');
+for (let i = 0; i < movieCards.length; i++) {
+  const movieCard = document.querySelector(`div.movie-${i}`);
+  movieCard[i].addEventListener('click', () => {
+    const showMovieInfo = () => {
+      const popMovie = `
+        <div class="pop-up col-sm-12 col-md-6">
+          <i class="close-pop fas fa-times-circle"></i>
+          <h3> Titre : ${movies[i].title} </h3>
+          <p> Genres : ${movies[i].genres} </p>
+          <p> Année de sortie : ${movies[i].year} </p>
+          <p> Note : ${movies[i].note} </p>
+          <h4> Résumé : </h4>
+          <p> ${movies[i].plot} </p>
+        `;
+      movieSection.innerHTML += popMovie;
+    };
+    showMovieInfo();
+    const popUpDisplay = document.querySelector('div.pop-up');
+    const closePop = document.querySelector('i.close-pop');
+    closePop.addEventListener('click', () => {
+      popUpDisplay.remove();
+    });
+  });
+}
+
+*/
