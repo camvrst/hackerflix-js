@@ -1,7 +1,3 @@
-# Parcel seed
-
-> A very simple seed to start a modern Single Page App development in no time
-> 
 ## how to use
 
 First use:
